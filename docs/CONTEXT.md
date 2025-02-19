@@ -49,22 +49,57 @@
   - `top_speed`: 최고 속도
   - `lap_record`: 랩 기록
 
-- **Drivers Table**: 드라이버의 정보를 저장합니다.
+- **Drivers Table**: 드라이버의 상세 정보를 저장합니다.
 
   - `id`: 고유 식별자
   - `name`: 드라이버 이름
-  - `nationality`: 소속 국가
-  - `team`: 소속 팀
-  - `points`: 포인트
+  - `team_id`: 팀 ID (Teams Table 참조)
+  - `country`: 소속 국가
+  - `podiums`: 포디움 횟수
+  - `points`: 총 포인트
+  - `grands_prix_entered`: 참가한 그랑프리 수
+  - `world_championships`: 월드 챔피언십 횟수
+  - `highest_race_finish`: 최고 레이스 순위
+  - `highest_grid_position`: 최고 그리드 위치
+  - `date_of_birth`: 생년월일
+  - `place_of_birth`: 출생지
 
-- **Constructors Table**: 컨스트럭터의 정보를 저장합니다.
+- **Teams Table**: 팀의 상세 정보를 저장합니다.
 
   - `id`: 고유 식별자
-  - `name`: 컨스트럭터 이름
-  - `points`: 포인트
+  - `full_team_name`: 팀의 전체 이름
+  - `base`: 팀의 본부 위치
+  - `team_chief`: 팀장
+  - `technical_chief`: 기술 책임자
+  - `chassis`: 섀시
+  - `power_unit`: 파워 유닛
+  - `first_team_entry`: 첫 팀 참가 연도
+  - `world_championships`: 월드 챔피언십 횟수
+  - `highest_race_finish`: 최고 레이스 순위
+  - `pole_positions`: 폴 포지션 횟수
+  - `fastest_laps`: 가장 빠른 랩 횟수
 
-- **Race Results Table**: 각 레이스의 결과를 저장합니다.
+- **Driver Rankings Table**: 년도별 드라이버 랭킹 정보를 저장합니다.
+
+  - `id`: 고유 식별자
+  - `year`: 랭킹이 적용되는 연도
+  - `driver_id`: 드라이버 ID (Drivers Table 참조)
+  - `total_points`: 해당 연도의 총 포인트
+  - `rank`: 해당 연도의 순위
+
+- **Team Rankings Table**: 년도별 팀 랭킹 정보를 저장합니다.
+
+  - `id`: 고유 식별자
+  - `year`: 랭킹이 적용되는 연도
+  - `team_id`: 팀 ID (Teams Table 참조)
+  - `total_points`: 해당 연도의 총 포인트
+  - `rank`: 해당 연도의 순위
+
+- **Race Results Table**: 드라이버의 레이스 결과를 저장합니다.
+
   - `id`: 고유 식별자
   - `race_id`: 레이스 ID (Races Table 참조)
   - `driver_id`: 드라이버 ID (Drivers Table 참조)
-  - `position`: 순위
+  - `team_id`: 팀 ID (Teams Table 참조)
+  - `position`: 레이스에서의 순위
+  - `points`: 레이스에서 획득한 포인트

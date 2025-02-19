@@ -1,0 +1,9 @@
+## git 커밋 규칙
+- use 'feat: ' or 'fix: ' or 'refactor: ' or 'chore: '
+- use 'feat: ' for new features
+- use 'fix: ' for bug fixes
+- use 'refactor: ' for code refactoring
+- use 'chore: ' for other changes
+- use 'feat: ' for new features
+- use 'fix: ' for bug fixes
+- use 'refactor: ' for code refactoring
