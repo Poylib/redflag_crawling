@@ -68,6 +68,7 @@
 
   - `id`: 고유 식별자
   - `full_team_name`: 팀의 전체 이름
+  - `name`: 팀의 이름
   - `base`: 팀의 본부 위치
   - `team_chief`: 팀장
   - `technical_chief`: 기술 책임자
@@ -84,16 +85,16 @@
   - `id`: 고유 식별자
   - `year`: 랭킹이 적용되는 연도
   - `driver_id`: 드라이버 ID (Drivers Table 참조)
-  - `total_points`: 해당 연도의 총 포인트
-  - `rank`: 해당 연도의 순위
+  - `points`: 해당 연도의 총 포인트
+  - `position`: 해당 연도의 순위
 
 - **Team Rankings Table**: 년도별 팀 랭킹 정보를 저장합니다.
 
   - `id`: 고유 식별자
   - `year`: 랭킹이 적용되는 연도
   - `team_id`: 팀 ID (Teams Table 참조)
-  - `total_points`: 해당 연도의 총 포인트
-  - `rank`: 해당 연도의 순위
+  - `points`: 해당 연도의 총 포인트
+  - `position`: 해당 연도의 순위
 
 - **Race Results Table**: 드라이버의 레이스 결과를 저장합니다.
 
